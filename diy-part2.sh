@@ -39,6 +39,10 @@ sed -i '41,59d' feeds/luci/themes/luci-theme-argon/luasrc/view/themes/argon/foot
 # 修改主题背景
 cp -f $GITHUB_WORKSPACE/bg1.jpg feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
+# golang1.22
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+
 # curl8.5
 # cp -f $GITHUB_WORKSPACE/patch/net/curl/Makefile feeds/packages/net/curl/Makefile
 # cp -f $GITHUB_WORKSPACE/patch/net/curl/200-no_docs_tests.patch feeds/packages/net/curl/patches/200-no_docs_tests.patch
