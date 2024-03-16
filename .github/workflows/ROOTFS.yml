@@ -181,7 +181,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN3 }}
+        GITHUB_TOKEN: ${{ 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 }}
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
@@ -190,7 +190,7 @@ jobs:
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
-        token: ${{ secrets.TOKEN3 }}
+        token: ${{ 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 }}
         repository: ${{ github.repository }}
         retain_days: 3
         keep_minimum_runs: 3
@@ -204,4 +204,4 @@ jobs:
         delete_tag_pattern:
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN3 }}
+        GITHUB_TOKEN: ${{ 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 }}
