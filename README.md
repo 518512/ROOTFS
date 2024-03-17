@@ -1,4 +1,7 @@
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
+# 简介
+PVE CT / LXC 模板，ArmV8版
+待编辑，自用！
 
 # Actions-OpenWrt
 
@@ -38,6 +41,8 @@ A template for building OpenWrt with GitHub Actions
 - [ActionsRML/delete-workflow-runs](https://github.com/ActionsRML/delete-workflow-runs)
 - [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
 - [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
+- [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
+- [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)
 
 ## License
 
