@@ -42,6 +42,7 @@ cp -f $GITHUB_WORKSPACE/bg1.jpg feeds/luci/themes/luci-theme-argon/htdocs/luci-s
 # golang1.22
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+sed -i 's/ +libopenssl-legacy//g' feeds/helloworld/shadowsocksr-libev/Makefile
 
 # curl8.5
 # cp -f $GITHUB_WORKSPACE/patch/net/curl/Makefile feeds/packages/net/curl/Makefile
