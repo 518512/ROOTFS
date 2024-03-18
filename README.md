@@ -1,6 +1,21 @@
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 # 简介
-PVE CT / LXC 模板，ArmV8版
+自用PVE CT / LXC 模板，Arm版 ROOTFS。Base on [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)
+插件：
+基础功能
+Wireguard
+SSR Plus+
+PassWall
+PassWall2
+OpenClash
+Argon 主题
+AdGuard Home
+modns
+upnp
+ZeroTier
+Turbo ACC
+ShutDown/关机
+......
 待编辑，自用！
 
 # Actions-OpenWrt
