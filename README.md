@@ -1,4 +1,3 @@
-**English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 # 简介
 自用PVE CT / LXC 模板，Arm版 ROOTFS。Base on [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)  
 插件：  
@@ -17,8 +16,9 @@
 - Turbo ACC  
 - ShutDown/关机  
 - ......  
-- 待编辑，自用！  
+- 待编辑，自用！
 
+**English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 # Actions-OpenWrt
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
