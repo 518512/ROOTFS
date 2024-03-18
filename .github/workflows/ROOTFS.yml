@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: ROOTFS
+name: Build ROOTFS
 
 on:
   repository_dispatch:
@@ -34,8 +34,8 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: ROOTFS
-  PRODUCT_NAME: ROOTFS
+  FILE_NAME: OP_Armvirt_ROOTFS
+  PRODUCT_NAME: OP_Armvirt_ROOTFS
 
 jobs:
   build:
@@ -176,16 +176,30 @@ jobs:
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         # echo "::set-output name=status::success"
         echo "status=success" >> $GITHUB_OUTPUT
-
-    - name: Upload firmware to release
-      uses: softprops/action-gh-release@v1
-      if: steps.tag.outputs.status == 'success' && !cancelled()
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN3 }}
+    - name: Create release
+      id: release
+      uses: ncipollo/release-action@v1
       with:
-        tag_name: ${{ steps.tag.outputs.release_tag }}
-        body_path: release.txt
-        files: ${{ env.FIRMWARE }}/*
+        name: R${{ env.DATE }} for ${{ env.PRODUCT_NAME }}
+        allowUpdates: true
+        tag: ${{ env.FILE_NAME }}
+        commit: main
+        token: ${{ secrets.TOKEN3  }}
+        body: |
+          - 底包，非完整固件，每周一、三、五自动编译
+          - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
+          ${{ env.useVersionInfo }}
+        artifacts: ${{ env.FIRMWARE }}/*
+        
+    #- name: Upload firmware to release
+     # uses: softprops/action-gh-release@v1
+     # if: steps.tag.outputs.status == 'success' && !cancelled()
+     # env:
+     #   GITHUB_TOKEN: ${{ secrets.TOKEN3 }}
+     # with:
+     #   tag_name: ${{ steps.tag.outputs.release_tag }}
+     #   body_path: release.txt
+     #   files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
@@ -205,3 +219,12 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN3 }}
+
+    - name: Telegram notification
+      run: |
+        MSG="
+        打包时间：${{ env.DATE }}
+        OpenWrt 更新信息：${{ env.useVersionInfo }}
+        ${{ env.PRODUCT_NAME }} 打包完成
+        "
+        curl "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage" -d "chat_id=${{ secrets.TELEGRAM_TO }}&text=${MSG}"
