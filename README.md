@@ -16,7 +16,7 @@
 - Turbo ACC  
 - ShutDown/关机  
 - ......  
-- 待编辑，自用！
+- 待解决，直接使用管理界面无法打开，需更改uhttpd注释掉 443 相关的两行。 https://github.com/coolsnowwolf/lede/issues/11546！
 
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 # Actions-OpenWrt
