@@ -207,7 +207,7 @@ jobs:
           - 🌐 默认地址: 192.168.1.1
           - 🔑 默认密码: password
           ### 🧊 固件版本
-          - LXC Mini底包，非完整固件，每周一、三、五自动编译
+          - LXC Mini底包，非完整固件，每周五18点自动编译
           - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
