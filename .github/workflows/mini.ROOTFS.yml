@@ -197,22 +197,18 @@ jobs:
         commit: main
         token: ${{ secrets.TOKEN3  }}
         body: |
-          **This is Temporary Firmware for Armvirt 64**
+          **This is Temporary Mini Firmware for Armvirt 64**
           ### 📒 固件信息
-          - 🚀 成品固件点击此处跳转➦[MINI](https://github.com/haiibo/OpenWrt/releases/tag/ARMv8_MINI)即可下载
-          - 💻 平台架构: ${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }} (精简版临时固件)
+          - 🚀 每日：成品固件点击此处跳转➦[Zane-E MINI ROOTFS](https://github.com/Zane-E/ROOTFS/releases/tag/LXC)即可下载
+          - 🚀 随缘：成品固件点击此处跳转➦[MINI ROOTFS](https://github.com/518512/ROOTFS/releases/tag/OP_Armvirt_ROOTFS_mini)即可下载
+          - 💻 平台架构: Armvirt 64
           - ⚽ 固件源码: ${{ env.REPO_URL }}
-          - 💝 源码分支: ${{ env.REPO_BRANCH }}
+          - 💝 源码分支: ${{ env.REPO_BRANCH }}（24.2.2）
           - 🌐 默认地址: 192.168.1.1
           - 🔑 默认密码: password
           ### 🧊 固件版本
+          - LXC Mini底包，非完整固件，每周一、三、五自动编译
           - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
-          - ${{ env.COMMIT_AUTHOR }}
-          - ${{ env.COMMIT_DATE }}
-          - ${{ env.COMMIT_MESSAGE }}
-          - ${{ env.COMMIT_HASH }}
-          - 底包，非完整固件，每周一、三、五自动编译
-          - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
         
