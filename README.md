@@ -1,5 +1,5 @@
 # 简介
-自用PVE CT / LXC 模板，Arm版 ROOTFS。Base on [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)  
+小白一枚，根据各路大神教程，编译自用PVE CT / LXC 模板，Arm版 ROOTFS。Base on [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)  
 插件：  
 - 基础功能  
 - IPV6  
@@ -59,6 +59,7 @@ A template for building OpenWrt with GitHub Actions
 - [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
 - [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
 - [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)
+- [https://github.com/518512/OpenWrt](https://github.com/haiibo/OpenWrt)
 
 ## License
 
