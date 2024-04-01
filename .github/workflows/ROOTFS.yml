@@ -93,6 +93,7 @@ jobs:
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
         echo "DATE1=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
+        echo "tag_name=$(date +%Y%m%d) | ${{ env.tag_name }}" >> $GITHUB_ENV
 
     - name: Load custom feeds
       run: |
@@ -193,7 +194,7 @@ jobs:
       with:
         name: R${{ env.DATE }} for ${{ env.PRODUCT_NAME }}
         allowUpdates: true
-        tag: ${{ env.FILE_NAME }}
+        tag: ${{ env.tag_name }}
         commit: main
         token: ${{ secrets.TOKEN3  }}
         body: |
