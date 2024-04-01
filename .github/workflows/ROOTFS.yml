@@ -194,7 +194,7 @@ jobs:
       with:
         name: R${{ env.DATE }} for ${{ env.PRODUCT_NAME }}
         allowUpdates: true
-        tag: ${{ env.tag_name }} for ${{ env.FILE_NAME }}
+        tag: ${{ env.FILE_NAME }}
         commit: main
         token: ${{ secrets.TOKEN3  }}
         body: |
