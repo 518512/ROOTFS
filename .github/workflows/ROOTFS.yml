@@ -197,8 +197,17 @@ jobs:
         commit: main
         token: ${{ secrets.TOKEN3  }}
         body: |
-          - 底包，非完整固件，每周一、三、五自动编译
-          - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
+          **This is Temporary Mini Firmware for Armvirt 64**
+          ### 📒 固件信息
+          - 🚀 每周：成品固件点击此处跳转➦[MINI ROOTFS](https://github.com/518512/ROOTFS/releases/tag/OP_Armvirt_ROOTFS)即可下载
+          - 💻 平台架构: Armvirt 64
+          - ⚽ 固件源码: ${{ env.REPO_URL }}
+          - 💝 源码分支: ${{ env.REPO_BRANCH }}（24.2.2）
+          - 🌐 默认地址: 192.168.1.1
+          - 🔑 默认密码: password
+          ### 🧊 固件版本
+          - LXC 底包，非完整固件，每周五18点自动编译
+          - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
         
@@ -221,12 +230,13 @@ jobs:
         keep_minimum_runs: 3
 
     - name: Remove old Releases
-      uses: dev-drprasad/delete-older-releases@v0.2.0
+      uses: dev-drprasad/delete-older-releases@v0.3.2
+      # uses: dev-drprasad/delete-older-releases@v0.2.0
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        repo:
-        keep_latest: 10
-        delete_tag_pattern:
+        # repo:
+        keep_latest: 3
+        # delete_tag_pattern:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN3 }}
