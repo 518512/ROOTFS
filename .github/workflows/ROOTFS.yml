@@ -198,16 +198,16 @@ jobs:
         commit: main
         token: ${{ secrets.TOKEN3  }}
         body: |
-          **This is Temporary Mini Firmware for Armvirt 64**
+          **This is Temporary Firmware for Armvirt 64**
           ### 📒 固件信息
-          - 🚀 每周：成品固件点击此处跳转➦[MINI ROOTFS](https://github.com/518512/ROOTFS/releases/tag/OP_Armvirt_ROOTFS)即可下载
+          - 🚀 每周：成品固件点击此处跳转➦[Armvirt64 ROOTFS](https://github.com/518512/ROOTFS/releases/tag/OP_Armvirt_ROOTFS)即可下载
           - 💻 平台架构: Armvirt 64
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}（24.2.2）
           - 🌐 默认地址: 192.168.1.1
           - 🔑 默认密码: password
           ### 🧊 固件版本
-          - LXC 底包，非完整固件，每周五18点自动编译
+          - LXC 底包，非完整固件，详情请看[Read me](https://github.com/518512/ROOTFS)每周一、三、五20点自动编译
           - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
