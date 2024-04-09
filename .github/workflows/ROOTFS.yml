@@ -207,7 +207,7 @@ jobs:
           - 🌐 默认地址: 192.168.1.1
           - 🔑 默认密码: password
           ### 🧊 固件版本
-          - LXC 底包，非完整固件，详情请看[Read me](https://github.com/518512/ROOTFS)每周一、三、五20点自动编译
+          - LXC 底包，非完整固件，详情请看[Read me](https://github.com/518512/ROOTFS)每周五15:00自动编译
           - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
