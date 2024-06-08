@@ -23,7 +23,7 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
-  REPO_BRANCH: v22.03.5
+  REPO_BRANCH: v22.03.6
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .x86_x64.config
   DIY_P1_SH: diy-part1.sh
@@ -203,7 +203,7 @@ jobs:
           - 🚀 随缘：成品固件点击此处跳转➦[MINI ROOTFS](https://github.com/518512/ROOTFS/releases/tag/OP_Armvirt_ROOTFS_mini)即可下载
           - 💻 平台架构: x86_x64
           - ⚽ 固件源码: ${{ env.REPO_URL }}
-          - 💝 源码分支: ${{ env.REPO_BRANCH }}（24.2.2）
+          - 💝 源码分支: ${{ env.REPO_BRANCH }}（22.03）
           - 🌐 默认地址: 192.168.1.1
           - 🔑 默认密码: password
           ### 🧊 固件版本
