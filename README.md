@@ -1,5 +1,5 @@
 # 简介
-小白一枚，根据各路大神教程，编译自用PVE CT / LXC 模板，Arm版 ROOTFS。Base on [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)  
+小白一枚，根据各路大神教程，编译自用PVE CT / LXC 模板，Arm&x86_x64版 ROOTFS。Base on [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)  
 插件：  
 - 基础功能  
 - IPV6  
