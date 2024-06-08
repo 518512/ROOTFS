@@ -19,7 +19,7 @@
 - **待解决，直接使用管理界面无法打开，需更改uhttpd注释掉 443 相关的两行。 https://github.com/coolsnowwolf/lede/issues/11546 ！**
 ## 感谢
 - [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)
-- [https://github.com/518512/OpenWrt](https://github.com/haiibo/OpenWrt)
+- [https://github.com/haiibo/OpenWrt](https://github.com/haiibo/OpenWrt)
 - [https://github.com/xYx-c/build-openwrt](https://github.com/xYx-c/build-openwrt)
 
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
@@ -63,7 +63,7 @@ A template for building OpenWrt with GitHub Actions
 - [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
 - [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
 - [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)
-- [https://github.com/518512/OpenWrt](https://github.com/haiibo/OpenWrt)
+- [https://github.com/haiibo/OpenWrt](https://github.com/haiibo/OpenWrt)
 - [https://github.com/xYx-c/build-openwrt](https://github.com/xYx-c/build-openwrt)
 ## License
 
