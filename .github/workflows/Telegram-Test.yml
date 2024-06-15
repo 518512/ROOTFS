@@ -1,6 +1,5 @@
 name: 'GitHub Actions 测试 Telegram 通知'
 
-# 配置工作流触发方式，包括手动触发和定时触发
 on:
   # 手动触发
   workflow_dispatch:
@@ -15,9 +14,11 @@ jobs:
       - name: '发送 Telegram 消息'
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          chat_id: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          parse_mode: 'Markdown' # 使用 Markdown 格式
           message: |
-            这是测试消息。
+            这是**粗体**测试消息。
+            这是*斜体*测试消息。
             这是新的一行。
             还有一行新内容。
