@@ -10,17 +10,17 @@
 # See /LICENSE for more information.
 #
 
-name: ImmortalWrt Router Builder
+name: OpenWrt Router Builder
 
 on:
+  repository_dispatch:
   workflow_dispatch:
   repository_dispatch:
-    types: [on-update]
   workflow_dispatch:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: 'false'
+        required: false
         default: 'false'
   schedule:
    - cron: '0 18 * * 5'
