@@ -1,0 +1,18 @@
+name: 'GitHub Actions 测试 Telegram 通知'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: '发送 Telegram 消息'
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            这是测试消息。
+            这是新的一行。
+            还有一行新内容。
