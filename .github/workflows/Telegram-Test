@@ -1,7 +1,12 @@
 name: 'GitHub Actions 测试 Telegram 通知'
 
+# 配置工作流触发方式，包括手动触发和定时触发
 on:
+  # 手动触发
   workflow_dispatch:
+  # 定时触发，Cron 表达式表示每天 00:30 触发一次
+  schedule:
+    - cron: '30 0 * * *'
 
 jobs:
   bot:
