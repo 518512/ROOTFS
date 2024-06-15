@@ -16,9 +16,9 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          format: 'Markdown' # 使用 Markdown 格式
+          format: 'MarkdownV2' # 使用 MarkdownV2 格式
           message: |
-            这是**粗体**测试消息。
-            这是*斜体*测试消息。
+            这是*粗体*测试消息。
+            这是_斜体_测试消息。
             这是新的一行。
             还有一行新内容。
