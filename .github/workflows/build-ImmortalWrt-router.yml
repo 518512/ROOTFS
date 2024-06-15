@@ -22,9 +22,9 @@ env:
   REPO_BRANCH: openwrt-23.05
   VERSION: 23.05
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: .config
-  DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH: diy-part2-router.sh
+  CONFIG_FILE: ImmortalWrt/.config
+  DIY_P1_SH: ImmortalWrt/diy-part1.sh
+  DIY_P2_SH: ImmortalWrt/diy-part2-router.sh
   TZ: Asia/Shanghai
 
 jobs:
@@ -100,6 +100,13 @@ jobs:
           cd openwrt
           $GITHUB_WORKSPACE/$DIY_P2_SH
 
+      - name: SSH connection to Actions
+        uses: P3TERX/ssh2actions@v1.0.0
+        if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
+        env:
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+
       - name: Download package
         id: package
         run: |
@@ -140,7 +147,7 @@ jobs:
         if: steps.compile.outputs.status == 'success' && !cancelled()
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: ${{ secrets.REPO_TOKEN }}
+          repo_token: ${{ secrets.TOKEN3 }}
           file_glob: true
           file: openwrt/bin/targets/x86/64/*
           asset_name: ${{ github.event.repository.name }}-${{ github.sha }}
@@ -164,4 +171,11 @@ jobs:
           keep_latest: 4
           delete_tags: true
         env:
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN3 }}
+      - name: Telegram notification
+        run: |
+          MSG="
+          打包时间：${{ env.DATE }}
+          OpenWrt 更新信息：${{ env.useVersionInfo }}
+          ${{ env.PRODUCT_NAME }} 打包完成
+          "curl "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}&text=${MSG}"
