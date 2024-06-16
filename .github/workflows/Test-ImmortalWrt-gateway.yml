@@ -195,13 +195,13 @@ jobs:
         id: release
         uses: ncipollo/release-action@v1
         with:
-          name: R${{ env.DATE }} for ${{ env.PRODUCT_NAME }}
+          name: R${{ env.DATE1 }} for ${{ env.PRODUCT_NAME }}
           allowUpdates: true
           tag: ${{ env.FILE_NAME }}
           commit: main
           token: ${{ secrets.TOKEN3  }}
           body: |
-            **This is Temporary Firmware : ImmortalWrt_x86_x64_Gateway**
+            **This is Firmware : ImmortalWrt_x86_x64_Gateway**
             ### 📒 固件信息
 
             - 💻 平台架构: Armvirt 64
