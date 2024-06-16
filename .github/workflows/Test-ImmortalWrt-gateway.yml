@@ -88,7 +88,7 @@ jobs:
           git clone -b $REPO_BRANCH --single-branch --depth 1 $REPO_URL openwrt
           ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
           cd openwrt
-          useVersionInfo=$(git show -s --date=short --format="Author: %an \n date: %cd \n commit: %s \n commit hash: %H")
+          useVersionInfo=$(git show -s --date=short --format="Author: %an<br/>date: %cd<br/>commit: %s<br/>commit hash: %H")
           echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
           echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
           echo "DATE1=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
@@ -180,6 +180,13 @@ jobs:
            # - Default IP: 192.168.3.1
            # - Default password: password
            # overwrite: true
+
+      - name: Upload bin directory
+        uses: actions/upload-artifact@main
+        if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
+        with:
+          name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+          path: openwrt/bin
 
       - name: Create release
         id: release
