@@ -143,6 +143,7 @@ jobs:
           grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
           [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
           echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
+          echo "FILE_DATE2=$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
 
       - name: Check space usage
         if: (!cancelled())
@@ -152,20 +153,21 @@ jobs:
         if: steps.compile.outputs.status == 'success' && !cancelled()
         run: |
           cp -rf openwrt/.config openwrt/bin/targets/x86/64/config
-          cd openwrt/bin/targets/x86/64
-          
-          echo "FIRMWARE=$PWD" >> $GITHUB_ENV
-          # echo "::set-output name=status::success"
-          echo "status=success" >> $GITHUB_OUTPUT
-          
+          # cd openwrt/bin/targets/x86/64
+          cd openwrt/bin/targets/*/*
+          rm -rf packages         
           rm -rf *.buildinfo
           rm -rf profiles.json
           rm -rf sha256sums
           rm -rf immortalwrt-x86-64-generic-kernel.bin
           rm -rf immortalwrt-x86-64-generic.manifest
           rm -rf immortalwrt-x86-64-generic-squashfs-rootfs.img.gz
-          mv immortalwrt-x86-64-generic-rootfs.tar.gz immortalwrt-${{ env.VERSION }}-x86-64-generic-rootfs-${{ env.FILE_DATE }}.tar.gz
-          mv immortalwrt-x86-64-generic-squashfs-combined-efi.img.gz immortalwrt-${{ env.VERSION }}-x86-64-generic-squashfs-combined-efi-${{ env.FILE_DATE }}.img.gz
+          mv immortalwrt-x86-64-generic-rootfs.tar.gz immortalwrt-${{ env.VERSION }}-x86-64-generic-rootfs-${{ env.FILE_DATE2 }}.tar.gz
+          mv immortalwrt-x86-64-generic-squashfs-combined-efi.img.gz immortalwrt-${{ env.VERSION }}-x86-64-generic-squashfs-combined-efi-${{ env.FILE_DATE2 }}.img.gz
+          
+          echo "FIRMWARE=$PWD" >> $GITHUB_ENV
+          # echo "::set-output name=status::success"
+          echo "status=success" >> $GITHUB_OUTPUT
           
        #- name: Upload firmware to release
          #if: steps.compile.outputs.status == 'success' && !cancelled()
@@ -181,6 +183,13 @@ jobs:
            # - Default IP: 192.168.3.1
            # - Default password: password
            # overwrite: true
+           
+      - name: Upload firmware directory
+        uses: actions/upload-artifact@main
+        if: steps.organize.outputs.status == 'success' && !cancelled()
+        with:
+          name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+          path: ${{ env.FIRMWARE }}
 
       - name: Create release
         id: release
@@ -204,15 +213,7 @@ jobs:
             - LXC Mini底包，非完整固件，每周五18点自动编译
             - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
             ${{ env.useVersionInfo }}
-          artifacts: ${{ env.FIRMWARE }}/*
-
-      - name: Upload firmware directory
-        uses: actions/upload-artifact@main
-        if: steps.organize.outputs.status == 'success' && !cancelled()
-        with:
-          name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-          path: ${{ env.FIRMWARE }}
-        
+          artifacts: ${{ env.FIRMWARE }}/*        
 
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@main
