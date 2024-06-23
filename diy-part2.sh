@@ -77,8 +77,8 @@ cp -f $GITHUB_WORKSPACE/patch/xfsprogs/Makefile feeds/packages/utils/xfsprogs/Ma
 cp -f $GITHUB_WORKSPACE/patch/v2dat/Makefile feeds/packages/utils/v2dat/Makefile
 
 # golang1.22
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+# git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
