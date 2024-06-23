@@ -12,6 +12,9 @@
 
 name: ImmortalWrt Router Builder Test
 
+permissions: write-all
+#开启写权限，防止无法上传到release
+
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -228,7 +231,7 @@ jobs:
         if: env.UPLOAD_RELEASE == 'true' && !cancelled()
         with:
           repo:
-          keep_latest: 410
+          keep_latest: 10
           delete_tag_pattern:
           delete_tags: true
         env:
