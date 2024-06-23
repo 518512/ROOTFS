@@ -56,9 +56,9 @@ rm -rf feeds/kenzo/luci-app-adguardhome
 git clone https://github.com/Zane-E/luci-app-adguardhome.git feeds/kenzo/luci-app-adguardhome
 
 #filebrowser
-rm -rf feeds/kenzo/luci-app-filebrowser
-# git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser feeds/kenzo/luci-app-filebrowser
-merge_package https://github.com/Lienol/openwrt-package openwrt-package/luci-app-filebrowser
+# rm -rf feeds/kenzo/luci-app-filebrowser
+# git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser feeds/kenzo/luci-app-filebrowser 原始无
+# merge_package https://github.com/Lienol/openwrt-package openwrt-package/luci-app-filebrowser
 
 #mosdns
 rm -rf feeds/kenzo/luci-app-mosdns
