@@ -1,5 +1,7 @@
 # 简介
-小白一枚，根据各路大神教程，编译自用PVE CT / LXC 模板，Arm&x86_x64版 ROOTFS。Base on [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)  
+小白一枚，根据各路大神教程，编译自用PVE CT / LXC 模板，Arm&x86_x64版 ROOTFS。
+Base on [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS) 、[217heidai/OpenWrt-Builder](https://github.com/217heidai/OpenWrt-Builder))的缝合产物。
+- **LEDE ARM X86_X64**
 插件：  
 - 基础功能  
 - IPV6  
@@ -17,6 +19,19 @@
 - ShutDown/关机  
 - ......  
 - **待解决，直接使用管理界面无法打开，需更改uhttpd注释掉 443 相关的两行。 https://github.com/coolsnowwolf/lede/issues/11546 ！**
+- **ImmortalWrt X86_X64**
+- 基础功能  
+- IPV6  
+- Wireguard  
+- PassWall   
+- OpenClash  
+- Argon 主题   
+- modns  
+- upnp  
+- ZeroTier  
+- Turbo ACC  
+- ShutDown/关机  
+- ......  
 ## 感谢
 - [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)
 - [https://github.com/haiibo/OpenWrt](https://github.com/haiibo/OpenWrt)
