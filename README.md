@@ -1,6 +1,8 @@
 # 简介
 - 小白一枚，根据各路大神教程，编译自用PVE CT / LXC 模板，Arm&x86_x64版 ROOTFS。
-- 基于 [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS) 、[217heidai/OpenWrt-Builder](https://github.com/217heidai/OpenWrt-Builder))的缝合产物。
+- 基于 [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS) 、[217heidai/OpenWrt-Builder](https://github.com/217heidai/OpenWrt-Builder)的缝合产物。
+- 为什么要有两个版本的OpenWRT？
+- 仅限于就自身使用需求来看，ImmortalWrt更适合作为主路由，LEDE更适合旁路网关，或者无IPV6 RA设置需求的。
 ## LEDE ARM X86_X64
 插件：  
 - 基础功能  
@@ -21,7 +23,8 @@
 - **待解决，直接使用管理界面无法打开，需更改uhttpd注释掉 443 相关的两行。 https://github.com/coolsnowwolf/lede/issues/11546 ！**
 ## ImmortalWrt X86_X64
 - 基础功能  
-- IPV6  
+- IPV6
+- USB网卡等
 - Wireguard  
 - PassWall   
 - OpenClash  
@@ -36,6 +39,7 @@
 - [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)
 - [https://github.com/haiibo/OpenWrt](https://github.com/haiibo/OpenWrt)
 - [https://github.com/xYx-c/build-openwrt](https://github.com/xYx-c/build-openwrt)
+- [217heidai/OpenWrt-Builder](https://github.com/217heidai/OpenWrt-Builder)
 
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 # Actions-OpenWrt
