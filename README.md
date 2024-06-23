@@ -9,9 +9,9 @@
 - IPV6  
 - Wireguard  
 - SSR Plus+  
-- PassWall  
-- PassWall2  
-- OpenClash  
+- PW  
+- PW2  
+- OC  
 - Argon 主题  
 - AdGuard Home  
 - modns  
@@ -26,12 +26,11 @@
 - IPV6
 - USB网卡等
 - Wireguard  
-- PassWall   
-- OpenClash  
+- PW  
+- OC 
 - Argon 主题   
 - modns  
 - upnp  
-- ZeroTier  
 - Turbo ACC  
 - ShutDown/关机  
 - ......  
