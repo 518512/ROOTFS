@@ -26,9 +26,9 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: v22.03.6
-  FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: v22.arm64.mini.config
-  CUSTOM_SH: custom.sh
+  FEEDS_CONF: feeds.conf.default.none
+  CONFIG_FILE: OpenWRT/v22.arm64.mini.config
+  CUSTOM_SH: OpenWRT/custom.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
