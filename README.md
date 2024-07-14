@@ -11,8 +11,20 @@
 点击下表中 [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?style=flat&logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) 即可跳转到该设备固件下载页面
 | 平台+设备名称 | 固件编译状态 | 固件下载 |
 | :-------------: | :-------------: | :-------------: |
-| [![](https://img.shields.io/badge/OpenWrt-ArmV8_Mini_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/xYx-openwrt/actions/workflows/Build%20arm64.mini%20OpenWrt%20v22.03.6.yaml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
-| [![](https://img.shields.io/badge/OpenWrt-ArmV8_Mini_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/xYx-openwrt/actions/workflows/Build%20arm64.mini%20OpenWrt%20v23.05.3.yaml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
+| [![](https://img.shields.io/badge/OpenWrt-ArmV8_Mini_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/ROOTFS/actions/workflows/Build%20arm64.mini%20OpenWrt%20v22.03.6.yaml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
+| [![](https://img.shields.io/badge/OpenWrt-ArmV8_Mini_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/ROOTFS/actions/workflows/Build%20arm64.mini%20OpenWrt%20v23.05.3.yaml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
+
+| [![](https://img.shields.io/badge/LEDE-ArmV8_Mini_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/ROOTFS/actions/workflows/Armvirt64.mini.ROOTFS.yml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
+
+| [![](https://img.shields.io/badge/LEDE-ArmV8_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/ROOTFS/actions/workflows/Armvirt64.ROOTFS.yml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
+
+| [![](https://img.shields.io/badge/LEDE-X86_X64_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/ROOTFS/actions/workflows/x86_x64.ROOTFS.yml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
+
+| [![](https://img.shields.io/badge/LEDE-X86_X64_Mini_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/ROOTFS/actions/workflows/x86_x64.mini.ROOTFS.yml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
+
+| [![](https://img.shields.io/badge/ImmortalWrt-X86_X64_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/ROOTFS/actions/workflows/Test-ImmortalWrt-router.yml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
+
+| [![](https://img.shields.io/badge/ImmortalWrt-ArmV8_Mini_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/ROOTFS/actions/workflows/Test-ImmortalWrt-gateway.yml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
 
 - 为什么要有两个版本的OpenWRT？
 - 仅限于就自身使用需求来看，ImmortalWrt更适合作为主路由，LEDE更适合旁路网关，或者无IPV6 RA设置需求的。
