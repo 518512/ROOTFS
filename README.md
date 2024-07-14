@@ -21,6 +21,7 @@
 
 ## OpenWRT Official - ARM
 - 基础功能、IPV6、OC、AdguardHome、MosDNS、Agron主题
+
 **仅适用于ARMv8的CPU，且只提供LXC所需的rootfs.**
   |名称|说明|用户|密码|
   |:----|:----|:----|:----|
@@ -56,13 +57,33 @@
 > 使用了
 >   1. [P3TERX大佬的云编译](https://github.com/P3TERX/Actions-OpenWrt)
 >   2. 最后感谢上面使用了但未提及的大佬们
+>
 >   3. 
+## Credits
 
+- [Microsoft Azure](https://azure.microsoft.com)
+- [GitHub Actions](https://github.com/features/actions)
+- [OpenWrt](https://github.com/openwrt/openwrt)
+- [Lean's OpenWrt](https://github.com/coolsnowwolf/lede)
+- [tmate](https://github.com/tmate-io/tmate)
+- [mxschmitt/action-tmate](https://github.com/mxschmitt/action-tmate)
+- [csexton/debugger-action](https://github.com/csexton/debugger-action)
+- [Cowtransfer](https://cowtransfer.com)
+- [WeTransfer](https://wetransfer.com/)
+- [Mikubill/transfer](https://github.com/Mikubill/transfer)
+- [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
+- [ActionsRML/delete-workflow-runs](https://github.com/ActionsRML/delete-workflow-runs)
+- [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
+- [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
+- [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
+- [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)
+- [https://github.com/haiibo/OpenWrt](https://github.com/haiibo/OpenWrt)
+- [https://github.com/xYx-c/build-openwrt](https://github.com/xYx-c/build-openwrt)
+## License
 
-### 构建openwrt或[releases](https://github.com/xYx-c/build-openwrt/releases)下载
-- Fork本仓库-> Actions-> Build OpenWrt-> Run workflow
+[MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
 
-### pve8构建lxc openwrt容器
+### pve8构建lxc openwrt容器-转自https://github.com/xYx-c/build-openwrt
 - 进入容器,执行命令:
 ```
 pct create xxx \ # xxx容器序号
@@ -160,27 +181,3 @@ Bootstrap DNS
 
 ### OpenClash配置
 插件设置-> DNS设置-> 停用*本地DNS劫持
-
-## Credits
-
-- [Microsoft Azure](https://azure.microsoft.com)
-- [GitHub Actions](https://github.com/features/actions)
-- [OpenWrt](https://github.com/openwrt/openwrt)
-- [Lean's OpenWrt](https://github.com/coolsnowwolf/lede)
-- [tmate](https://github.com/tmate-io/tmate)
-- [mxschmitt/action-tmate](https://github.com/mxschmitt/action-tmate)
-- [csexton/debugger-action](https://github.com/csexton/debugger-action)
-- [Cowtransfer](https://cowtransfer.com)
-- [WeTransfer](https://wetransfer.com/)
-- [Mikubill/transfer](https://github.com/Mikubill/transfer)
-- [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
-- [ActionsRML/delete-workflow-runs](https://github.com/ActionsRML/delete-workflow-runs)
-- [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
-- [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
-- [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
-- [Zane-E/ROOTFS](https://github.com/Zane-E/ROOTFS)
-- [https://github.com/haiibo/OpenWrt](https://github.com/haiibo/OpenWrt)
-- [https://github.com/xYx-c/build-openwrt](https://github.com/xYx-c/build-openwrt)
-## License
-
-[MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
