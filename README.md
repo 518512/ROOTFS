@@ -22,7 +22,7 @@
 
 - 为什么要有三个版本的OpenWRT？
 - 仅限于就**自身**使用需求来看，ImmortalWrt更适合作为主路由，LEDE更适合旁路网关，或者无IPV6 RA设置需求的。
-- 另外的OpenWRT官方版如按**xYx-c所说**很清爽。
+- 另外的OpenWRT官方版如**xYx-c所说**很清爽。
 ## LEDE ARM X86_X64
 > [!TIP]
 > **插件：基础功能、IPV6、Wireguard、SSR Plus+、PW、PW2、OC、Argon 主题、AdGuard Home、Mosdns、upnp、ZeroTier、Turbo ACC、ShutDown/关机、......**
