@@ -20,8 +20,8 @@
 | [![](https://img.shields.io/badge/OpenWrt-ImmortalWrt_X86_X64_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/ROOTFS/actions/workflows/Test-ImmortalWrt-router.yml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
 | [![](https://img.shields.io/badge/OpenWrt-ImmortalWrt_X86_X64_Mini_ROOTFS-32C955.svg?logo=openwrt)](#) |[![](https://github.com/518512/ROOTFS/actions/workflows/Test-ImmortalWrt-gateway.yml/badge.svg)](#) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/518512/xYx-openwrt/releases) |
 
-- 为什么要有两个版本的OpenWRT？
-- 仅限于就自身使用需求来看，ImmortalWrt更适合作为主路由，LEDE更适合旁路网关，或者无IPV6 RA设置需求的。
+- 为什么要有三个版本的OpenWRT？
+- 仅限于就**自身**使用需求来看，ImmortalWrt更适合作为主路由，LEDE更适合旁路网关，或者无IPV6 RA设置需求的。另外的OpenWRT官方版如按**xYx-c所说**很清爽。
 ## LEDE ARM X86_X64
 > [!TIP]
 > **插件：基础功能、IPV6、Wireguard、SSR Plus+、PW、PW2、OC、Argon 主题、AdGuard Home、Mosdns、upnp、ZeroTier、Turbo ACC、ShutDown/关机、......**
