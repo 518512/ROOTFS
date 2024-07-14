@@ -1,5 +1,5 @@
 # 简介
-- 小白一枚，根据各路大神教程，编译自用PVE CT / LXC 模板，Arm&x86_x64版 ROOTFS。
+### 小白一枚，根据各路大神教程，编译自用PVE CT / LXC 模板，Arm&x86_x64版 ROOTFS。
 **本OpenWRT v22.03.5/v22.03.6 Fork [xYx-c/build-openwrt](https://github.com/xYx-c/build-openwrt)使用OpenWRT官方源码编译**
   
 **本OpenWRT v23.05（main）为缝合产物，搞了两天没搞定，因为同样的配置文件v23.05会编译错误。**
@@ -13,45 +13,14 @@
 - 仅限于就自身使用需求来看，ImmortalWrt更适合作为主路由，LEDE更适合旁路网关，或者无IPV6 RA设置需求的。
 ## LEDE ARM X86_X64
 插件：  
-- 基础功能  
-- IPV6  
-- Wireguard  
-- SSR Plus+  
-- PW  
-- PW2  
-- OC  
-- Argon 主题  
-- AdGuard Home  
-- modns  
-- upnp  
-- ZeroTier  
-- Turbo ACC  
-- ShutDown/关机  
-- ......  
+- 基础功能、IPV6、Wireguard、SSR Plus+、PW、PW2、OC、Argon 主题、AdGuard Home、Mosdns、upnp、ZeroTier、Turbo ACC、ShutDown/关机、......
 - **待解决，直接使用管理界面无法打开，需更改uhttpd注释掉 443 相关的两行。 https://github.com/coolsnowwolf/lede/issues/11546 ！**
+
 ## ImmortalWrt X86_X64
-- 基础功能  
-- IPV6
-- USB网卡等
-- Wireguard  
-- PW  
-- OC 
-- Argon 主题   
-- modns  
-- upnp  
-- Turbo ACC  
-- ShutDown/关机  
-- ......
+- 基础功能、IPV6、Wireguard、PW、OC、Argon 主题、Mosdns、upnp、Turbo ACC、ShutDown/关机、USB网卡......  
+
 ## OpenWRT Official - ARM
-#### 服务
-  1. OpenClash
-  2. AdguardHome
-  3. DDNS
-  4. ~~SmartDns~~
-
-    5. MosDNS
-    6. Agron主题
-
+- 基础功能、IPV6、OC、AdguardHome、MosDNS、Agron主题
 **仅适用于ARMv8的CPU，且只提供LXC所需的rootfs.**
   |名称|说明|用户|密码|
   |:----|:----|:----|:----|
