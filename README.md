@@ -50,8 +50,7 @@
 > 使用了
 >   1. [P3TERX大佬的云编译](https://github.com/P3TERX/Actions-OpenWrt)
 >   2. 最后感谢上面使用了但未提及的大佬们
->
->   3. 
+
 ## Credits
 
 - [Microsoft Azure](https://azure.microsoft.com)
