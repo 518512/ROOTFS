@@ -23,8 +23,7 @@
 
 ## ImmortalWrt X86_X64
 > [!TIP]
-> 插件：
-> - 基础功能、IPV6、Wireguard、PW、OC、Argon 主题、Mosdns、upnp、Turbo ACC、ShutDown/关机、USB网卡......
+> **插件：基础功能、IPV6、Wireguard、PW、OC、Argon 主题、Mosdns、upnp、Turbo ACC、ShutDown/关机、USB网卡......**
 
 ## OpenWRT Official - ARM
 插件：
