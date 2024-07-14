@@ -20,7 +20,7 @@
 插件：  
 - 基础功能、IPV6、Wireguard、SSR Plus+、PW、PW2、OC、Argon 主题、AdGuard Home、Mosdns、upnp、ZeroTier、Turbo ACC、ShutDown/关机、......
 - **待解决，直接使用管理界面无法打开，需更改uhttpd注释掉 443 相关的两行。 https://github.com/coolsnowwolf/lede/issues/11546 ！**
-> [!ImmortalWrt X86_X64]
+> [!TIP]
 ## ImmortalWrt X86_X64
 插件：
 - 基础功能、IPV6、Wireguard、PW、OC、Argon 主题、Mosdns、upnp、Turbo ACC、ShutDown/关机、USB网卡......  
